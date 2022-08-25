@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" href="Cars-Logo.png" />
+
+    <title>Cars Lover</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://nextshowroom.sayandas23.repl.co/">Dream Cars</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://nextshowroom.sayandas23.repl.co/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Find Your Category
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://supercars.sayandas23.repl.co/">Super Cars</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="https://hypercars.sayandas23.repl.co/">Hyper Cars</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://bookaride.sayandas23.repl.co/">Book a Ride</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Members Only</a>
+                    </li>
+                    <a class="nav-link" href="https://contactus.sayandas23.repl.co/">Contact Us</a>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning" type="submit" style="margin-right: 3px;">Go</button>
+                </form>
+            </div>
+            <div class="mx-auto d-flex">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal"
+                    style="margin-right: 3px;">LogIn</button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal"
+                    style="margin-right: 3px">SignUp</button>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">LogIn Page</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#submitModal">LogIn</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="submitModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">LoggedIn Successful</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SignUp Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SignIn Page</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Re-enter Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">I'M Agree to Terms and
+                                    Condition</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#doneModal">I'M Done</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="doneModal" tabindex="-1" aria-labelledby="doneModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>We have sent an OTP to your registered E-mail.</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword2" class="form-label">Enter OTP</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword2">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#successModal">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Welcome to Dream Cars</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-bs-dismiss="modal">DONE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert"
+        style="margin-top: 3px; margin-bottom: 3px;">
+        <strong>Already a User&nbsp</strong>LogIn.<strong>&nbsp&nbsp&nbsp&nbspNew Here?&nbsp</strong>SignUp.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                aria-label="Slide 7"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1620971409036-50f8ae011b4f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1520&q=80"
+                    class="d-block w-100" style="height: 95vh; width: 99vw;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>All Your Dream Cars Are here</h5>
+                    <p>Just at your door step.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://store-images.s-microsoft.com/image/apps.64618.14124702047203822.12dc682f-e309-4d6d-b976-e7119e5586ad.ac657235-340a-47fe-a686-f6ff95f827dd"
+                    class="d-block w-100" style="height: 95vh; width: 99vw;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://www.luxuryandexpensive.com/img/h3_1.jpg" class="d-block w-100"
+                    style="height: 95vh; width: 99vw;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Also you Can Visit your Nearest Showroom</h5>
+                    <p>Always Welcome.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://media.autoexpress.co.uk/image/private/s--s8XR6FQh--/v1562243277/autoexpress/2016/09/160588-car-salone-parigi.jpg"
+                    class="d-block w-100" style="height: 95vh; width: 99vw;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/over1000hp-1596741273.jpg"
+                    class="d-block w-100" style="height: 95vh; width: 99vw;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>So What are you Waiting for?</h5>
+                    <p>Contact Us.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/limitedlambos2-1618325640.jpg"
+                    class="d-block w-100" style="height: 95vh; width: 99vw;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1574162438041-e90a6ab60963?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=785&ixid=MnwxfDB8MXxyYW5kb218M
+                Hx8c3VwZXJjYXJ8fHx8fHwxNjM2MTM1MzMx&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600"
+                    class="d-block w-100" style="height: 95vh; width: 99vw;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Run as fast as you can</h5>
+                    <p>Time is too short</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="d-flex justify-content-center my-4 mx-5 row">
+        <div class="card mx-5 my-5 col-sm-12 col-md-8 col-lg-6 col-xl-4 col-xxl-3" style="width: 18rem;">
+            <img height="286rem"
+                src="https://image.shutterstock.com/image-vector/car-shop-shopping-logo-design-260nw-574467076.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Sell Your Car</h5>
+                <p class="card-text">If you SELL the car to us then you can get a much higher price. Exchange is
+                    Also
+                    avaliable.</p>
+                <a href="#" class="btn btn-primary">VISIT HERE</a>
+            </div>
+        </div>
+        <div class="card mx-5 my-5 col-sm-12 col-md-8 col-lg-6 col-xl-4 col-xxl-4" style="width: 18rem;">
+            <img height="315rem"
+                src="https://media.istockphoto.com/vectors/purchase-buy-sharing-car-logo-vector-id1190146356?k=20&m=1190146356&s=170667a&w=0&h=Z0q36gEJUL44C8iu8mXKk-mY0ybjg6umAgy_9uzfDQM="
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Buy a Car</h5>
+                <p class="card-text">If you BUY a car from us you will get it at a much lower price.</p>
+                <a href="#" class="btn btn-primary">VISIT HERE</a>
+            </div>
+        </div>
+        <div class="card mx-5 my-5 col-sm-12 col-md-8 col-lg-6 col-xl-4 col-xxl-3" style="width: 18rem;">
+            <img height="286rem" src="https://i.pinimg.com/736x/97/c3/ae/97c3aea6eccb9f844093f79920df80ce.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Car Exchange</h5>
+                <p class="card-text">You can EXCHANGE your old car with a new one. This is a very good deal we
+                    offer.
+                </p>
+                <a href="#" class="btn btn-primary">VISIT HERE</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-5 border-top">
+
+                <ul class="nav row-6 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#twitter"><i class="fab fa-twitter-square"></i></use>
+                            </svg></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#linkedIn"><i class="fab fa-linkedin"></i></i></use>
+                            </svg></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#facebook"><i class="fab fa-facebook"></i></use>
+                            </svg></a></li>
+                </ul>
+
+                <p class="nav row-cols-md-6 text-center text-muted">© 2021 Company, Inc</p>
+
+            </footer>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    
+    -->
+</body>
+
+</html>
